@@ -1,0 +1,25 @@
+body { 
+   background-color: #E2B13C ; 
+} 
+
+.navbar { 
+    margin-bottom: 20px;
+}  
+
+.naslov { 
+    text-align: center; 
+    margin-bottom: 20px;
+} 
+
+ .carousel-item img { 
+    height: 400px;
+}  
+
+.vestii img { 
+    height: 250px;
+}  
+
+.btn { 
+
+    background-color: #3262a8; 
+} 

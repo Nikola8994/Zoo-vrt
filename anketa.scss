@@ -1,0 +1,41 @@
+$color_1: white;
+$font-family_1: ABeeZee;
+$background-color_1: #E2B13C;
+$background-color_2: #3262a8;
+
+body {
+	font-family: $font-family_1;
+	background-color: $background-color_1;
+}
+.card {
+	h4 {
+		text-align: center;
+	}
+}
+.anketa {
+	margin-top: 25px;
+}
+h1 {
+	text-align: center;
+	margin-top: 5px;
+	color: $color_1;
+}
+#taster {
+	background-color: $background-color_2;
+	color: $color_1;
+	margin-bottom: 20px;
+}
+.boks {
+	background-color: $background-color_2;
+	border-radius: 10px;
+}
+.slika {
+	img {
+		height: 300px;
+	}
+}
+.container {
+	h1 {
+		text-align: center;
+	}
+}

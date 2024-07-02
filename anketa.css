@@ -1,0 +1,37 @@
+body {
+  font-family: ABeeZee;
+  background-color: #E2B13C;
+}
+
+.card h4 {
+  text-align: center;
+}
+
+.anketa {
+  margin-top: 25px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 5px;
+  color: white;
+}
+
+#taster {
+  background-color: #3262a8;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.boks {
+  background-color: #3262a8;
+  border-radius: 10px;
+}
+
+.slika img {
+  height: 285px;
+}
+
+.container h1 {
+  text-align: center;
+}/*# sourceMappingURL=anketa.css.map */

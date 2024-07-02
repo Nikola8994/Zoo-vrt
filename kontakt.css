@@ -1,0 +1,44 @@
+
+
+h1 { 
+    margin-bottom: 20px;
+}
+
+ul li { 
+    list-style-type: none;
+} 
+
+body {
+    background-color: #E2B13C ; 
+} 
+
+.btn { 
+
+    background-color: #3262a8;
+} 
+
+
+
+iframe { 
+    width: 50em; 
+    border-radius: 10px;
+} 
+
+.mapa { 
+    display: flex; 
+    justify-content: center; 
+    
+
+} 
+
+footer { 
+    margin-top: 20px;
+} 
+button { 
+    border-radius: 10px; 
+    background-color: #3262a8;
+} 
+
+button:hover { 
+    background-color:cornflowerblue;
+}

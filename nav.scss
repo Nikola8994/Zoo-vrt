@@ -1,0 +1,25 @@
+$color_1: white;
+$background-color_1: #3262a8;
+
+nav {
+	background-color: $background-color_1;
+	img {
+		width: 150px !important;
+		height: 50px !important;
+		margin-right: 30px;
+	}
+	.nav-item {
+		a {
+			margin-right: 5px;
+		}
+	}
+}
+.nav-item {
+	a {
+		color: $color_1;
+	}
+}
+body {
+	font-family: ABeeZee;
+	
+  }

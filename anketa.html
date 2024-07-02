@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zoološki vrt</title>    
+    
+
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+
+<link rel="stylesheet" href="anketa.css"> 
+<link rel="stylesheet" href="nav.css">
+
+
+  </head> 
+
+
+  <body> 
+
+    <nav class="navbar navbar-expand-lg  "  >
+        <div class="container-fluid">
+          <a href="index.html">  <img src="logo1.png" alt="" ></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item  ">
+                <a class="nav-link   " aria-current="page"   href="index.html">Početna</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="zivotinje.html">Životinje</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="galerija.html">Galerija</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="karte.html">Karte </a>
+              </li> 
+
+              <li class="nav-item">
+                <a class="nav-link " href="anketa.html" >Anketa</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link  " href="kontakt.html">Kontakt </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>  
+  
+      
+
+
+
+
+
+    
+
+
+<div class="container">  
+  
+<h1>Anketa</h1>
+<div class="slika">
+  <div class="card mb-3">
+    <img src="pitanje2.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h4 class="card-title">     Pomozite nam</h4>
+      <p class="card-text">U ovoj anketi nastojimo da vidimo koliko ste zadovoljni sa trenutnom uslugom 
+        koju vam pružamo. Na osnovu vaše ocene mi ćemo pokušati da se još više unapredimo
+         i da tako obezbedimo bolje uslove kako vama kao našim posetiocima tako i stanarima 
+        ovog našeg divnog zoološkog vrta. Srdačan pozdrav od celog tima zoološkog vrta!</p>
+     
+    </div>
+  </div>
+  
+
+</div>
+
+  
+
+ 
+
+ 
+
+ 
+
+
+  <div class="boks"> 
+    <h1>Vaš minut nama znači mnogo</h1>
+<div style="margin-bottom: 10px;">
+  <label for="name" class="form-label text-white col-12"> <h3 class="text-center">1. Kako vam se čini trenutni ambijent u kojem se nalaze životinje?</h3></label>
+  <div class="text-center">
+    <select class="col-2 text-center" id="lista1">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+  </select>
+</div>
+</div>
+<div style="margin-bottom: 10px;">
+  <label for="name" class="form-label text-white col-12"> <h3 class="text-center">2 Da li su naši vodiči dovoljno gostoljubivi prema vama? </h3></label>
+  <div class="text-center">
+  <select class="col-2 text-center" id="lista2">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+</div>
+</div>
+<div style="margin-bottom: 10px;">
+  <label for="name" class="form-label text-white col-12"> <h3 class="text-center">3. Kako vam se čini odnos cene i kvaliteta koji dobijate?</h3></label>
+  <div class="text-center">
+  <select class="col-2 text-center" id="lista3">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+</form>
+
+<div class="col-12 text-center">
+<button class="btn "  id="taster">Posalji</button> 
+<div class="alert alert-danger"  id="poruka1" style="display: none;">Srednja vrednost je izmedju 1 i 2.5</div>
+<div class="alert alert-warning"  id="poruka2" style="display: none;">Srednja vrednost je izmedju 2.5 i 3.5</div>
+<div class="alert alert-success"  id="poruka3" style="display: none;">Srednja vrednost je veca  od 3.5</div>
+</div>
+<script>
+$(document).ready(function(){
+$("#taster").click(function(){
+var Select= $("#lista1 option:selected").val()
+var Select1= $("#lista2 option:selected").val()
+var Select2= $("#lista3 option:selected").val()
+ if(Select==undefined || Select1==undefined || Select2==undefined){  
+alert("Morate popuniti celu anketu")                         
+}
+var IntSelect= parseInt(Select);
+var IntSelect1=parseInt(Select1);
+var IntSelect2= parseInt(Select2);
+var Rezultat= IntSelect+IntSelect1+IntSelect2
+var Rezultat2= Rezultat/3
+var Provera= document.getElementById("poruka1")
+var Provera2= document.getElementById("poruka2")
+var Provera3= document.getElementById("poruka3")
+if(Rezultat2 > 1 && Rezultat2 < 2.5){ 
+Provera2.style.display="none";
+Provera.style.display="block";
+Provera3.style.display="none";
+}
+if(Rezultat2 >2.5 && Rezultat2 <3.5){
+Provera2.style.display="block";
+Provera.style.display="none";
+Provera3.style.display="none";
+}
+if(Rezultat2 >3.5){
+Provera3.style.display="block";
+Provera2.style.display="none";
+Provera.style.display="none";
+}
+})
+})
+</script>
+
+
+
+</div>
+</div>
+
+
+         
+
+
+
+
+      
+      <footer class=" text-center text-lg-start"  style="background-color: #f9efd8;">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <form action="">
+            <!--Grid row-->
+            <div class="row">
+              <!--Grid column-->
+              <div class="col-auto mb-4 mb-md-0">
+                <p class="pt-2">
+                  <strong>Prijavi se na newsletter</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-md-5 col-12 mb-4 mb-md-0">
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="form5Example25" class="form-control" />
+                  <label class="form-label" for="form5Example25">Email adresa</label>
+                </div>
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-auto mb-4 mb-md-0">
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary mb-4">
+                  Prijavi se
+                </button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2023 Copyright:
+          <a class="text-dark" href="index.html">zooloskivrt.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+  
+ 
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>

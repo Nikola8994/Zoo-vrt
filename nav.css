@@ -1,0 +1,19 @@
+nav {
+  background-color: #3262a8;
+}
+nav img {
+  width: 150px !important;
+  height: 50px !important;
+  margin-right: 30px;
+}
+nav .nav-item a {
+  margin-right: 5px;
+}
+
+.nav-item a {
+  color: white;
+}
+
+body {
+  font-family: ABeeZee;
+}/*# sourceMappingURL=nav.css.map */
